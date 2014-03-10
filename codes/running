@@ -8,3 +8,20 @@ jar -cvf ./wordcount.jar -C wordcount_classes/ .
 Run the job:
 hadoop jar ./wordcount.jar org.myorg.WordCount /user/shayan/myInputDir/erl_crash.dump /user/shayan/myOutputdir2
 
+
+
+
+Running the hdfs cat example (from
+https://sites.google.com/site/hadoopandhive/home/hadoop-how-to-read-a-file-from-hdfs)
+
+Compile:
+javac -classpath
+$HADOOP_HOME/share/hadoop/common/hadoop-common-2.3.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.3.0.jar:$HADOOP_HOME/share/hadoop/common/lib/commons-cli-1.2.jar
+-d Cat Cat.java reduce-client-core-2.3.0.jar:$HADOOP_HOME/share/hadop
+
+Create jar file:
+jar -cvf Cat.jar -C Cat/ .
+
+
+Run the jar file:
+hadoop jar Cat.jar org.liveve.shayan.Cat /users/shayan/simple
