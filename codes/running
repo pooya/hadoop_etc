@@ -3,7 +3,7 @@ javac -classpath $HADOOP_HOME/share/hadoop/common/hadoop-common-2.3.0.jar:$HADOO
 
 
 Create jar file:
-jar -cvf /usr/joe/wordcount.jar -C wordcount_classes/ .
+jar -cvf ./wordcount.jar -C wordcount_classes/ .
 
 Run the job:
 hadoop jar ./wordcount.jar org.myorg.WordCount /user/shayan/myInputDir/erl_crash.dump /user/shayan/myOutputdir2
