@@ -24,4 +24,4 @@ jar -cvf Cat.jar -C Cat/ .
 
 
 Run the jar file:
-hadoop jar Cat.jar org.liveve.shayan.Cat /users/shayan/simple
+hadoop jar Cat.jar org.liveve.shayan.Cat
