@@ -14,6 +14,12 @@ public class Cat{
                 try{
                         Path pt = new Path("hdfs://devdisco03/user/shayan/simple");
                         FileSystem fs = FileSystem.get(new Configuration());
+                        BlockLocation [] blockLocations = fs.getFileBlockLocations(pt, 0, 0);
+                        for (BlockLocation bl : blockLocations) {
+                            for (String st : bl.getHosts()) {
+                                System.out.println(st);
+                            }
+                        }
                         BufferedReader br=new BufferedReader(new InputStreamReader(fs.open(pt)));
                         String line;
                         line=br.readLine();

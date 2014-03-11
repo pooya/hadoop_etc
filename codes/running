@@ -15,9 +15,9 @@ Running the hdfs cat example (from
 https://sites.google.com/site/hadoopandhive/home/hadoop-how-to-read-a-file-from-hdfs)
 
 Compile:
-javac -classpath
-$HADOOP_HOME/share/hadoop/common/hadoop-common-2.3.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.3.0.jar:$HADOOP_HOME/share/hadoop/common/lib/commons-cli-1.2.jar
--d Cat Cat.java reduce-client-core-2.3.0.jar:$HADOOP_HOME/share/hadop
+javac -classpath \
+$HADOOP_HOME/share/hadoop/common/hadoop-common-2.3.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.3.0.jar:$HADOOP_HOME/share/hadoop/common/lib/commons-cli-1.2.jar \
+-d Cat Cat.java
 
 Create jar file:
 jar -cvf Cat.jar -C Cat/ .
